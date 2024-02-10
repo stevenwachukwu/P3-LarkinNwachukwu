@@ -4,6 +4,7 @@
 #include "Player.hpp"
 #include "tools.hpp"
 #include "Enum.hpp"
+#include "column.hpp"
 
 
 void UnitDice (){
@@ -41,6 +42,10 @@ void UnitPlayer () {
 int main() {
     // UnitDice();
     // bye();
-    UnitPlayer();
+   //UnitPlayer();
+
+    Column activating (2); //the constructor
+    activating.getState();
+    activating.print(cout);
     return 0;
 }
