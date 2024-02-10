@@ -2,6 +2,7 @@
 #ifndef column
 #define column
 #include "tools.hpp"
+#include "Enum.hpp"
 
 
 class Column {
@@ -11,7 +12,7 @@ private:
      short int columnPosition [5]; //the array represents column length and current square positions
      int columnNum;
      enum columnState {Available, Pending, Captured};
-     int columnMarker [5] = {0};
+     int columnMarker [5] = {-1, -1, -1, -1, -1};
 
      columnState state = Available;
 
