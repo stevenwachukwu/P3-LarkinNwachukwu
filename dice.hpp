@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #ifndef dice
 #define dice
 
@@ -14,5 +15,4 @@ public:
     ostream& print(ostream&);
     const int* roll();
 };
-inline ostream& operator << (ostream& output, Dice& d) {return d.print(output);}
 #endif
