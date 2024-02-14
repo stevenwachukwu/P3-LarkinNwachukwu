@@ -10,8 +10,8 @@ add_executable(P1-LarkinNwachukwu main.cpp
         dice.cpp
         player.hpp
         player.cpp
-        Enum.cpp
         Enum.hpp
         column.cpp
         column.hpp
+        Enum.cpp
 )
