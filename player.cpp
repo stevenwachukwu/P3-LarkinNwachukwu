@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #include "Player.hpp"
 Player::Player(string playerName, ECcolor color):playerName(playerName) , colorVal(color) {
 
@@ -9,7 +10,7 @@ ostream& Player::print(ostream& playerOutput) {
     playerOutput << "Player's score: " << score << endl;
     playerOutput << "The scoreboard: " << scoreboard[0,1,2] << endl;
     return playerOutput;
-} //print function to output the player's information
+} //the print function to output the player's information
 
 ECcolor Player::color() {
     return colorVal;
