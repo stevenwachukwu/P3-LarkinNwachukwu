@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #include "dice.hpp"
 
 Dice::Dice(int n){
@@ -26,3 +27,4 @@ ostream& Dice::print(ostream& diceOutput) {
     return diceOutput;
 
 } //print function for the program
+inline ostream& operator << (ostream& output, Dice& d) {return d.print(output);}
