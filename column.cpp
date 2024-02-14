@@ -1,4 +1,4 @@
-
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #include "column.hpp"
 
 Column::Column(int columnNum):columnNum(columnNum) {TowerMarker = -1;}
@@ -71,4 +71,5 @@ void Column::stop(Player * player) {
         }
 return columnOutput;
     }
+
 
