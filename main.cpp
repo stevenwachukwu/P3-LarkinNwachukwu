@@ -38,14 +38,30 @@ void UnitPlayer () {
 
 }
 
+void UnitColumn () {
+    Column creation1(2);
+    Column creation2(11);
+    cout << creation1.move();
+    cout << creation2.move();
+    Player playing("Josh", ECcolor::blue);
+    cout << creation1.startTower(&playing);
+    cout << creation1.move();
+    creation1.stop(&playing);
+    cout << creation1.getState();
+    creation1.print(cout);
+    cout << endl;
+    cout << creation2.startTower(&playing);
+    creation2.move();
+    creation2.stop(&playing);
+    cout << creation2.getState();
+    creation2.print(cout);
+}
 
 int main() {
     // UnitDice();
     // bye();
    //UnitPlayer();
 
-    Column activating (2); //the constructor
-    activating.getState();
-    activating.print(cout);
+   UnitColumn();
     return 0;
 }
