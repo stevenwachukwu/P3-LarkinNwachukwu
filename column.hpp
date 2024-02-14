@@ -14,6 +14,7 @@ private:
     int columnMarker [5] = {-1, -1, -1, -1, -1};
     columnState state = Available;
     const string colstates[3] = {"Available", "Pending", "Captured"};
+    int TowerMarker;
 
 public:
     Column(int columnNum); //the constructor
