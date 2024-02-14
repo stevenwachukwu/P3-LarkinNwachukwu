@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #ifndef player_hpp
 #define player_hpp
 #include "Enum.hpp"
@@ -12,9 +13,10 @@ private:
 
 
 public:
+    //constructors and destructor for player
     Player(string playerName, ECcolor color);
-    ECcolor color();
     ~Player() = default;
+    ECcolor color();
     ostream& print(ostream& playerOutput);
     int getScore();
     bool wonColumn(int colNum);
