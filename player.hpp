@@ -1,5 +1,5 @@
-#ifndef player
-#define player
+#ifndef player_hpp
+#define player_hpp
 #include "Enum.hpp"
 #include "tools.hpp"
 
