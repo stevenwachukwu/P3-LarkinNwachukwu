@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #ifndef column
 #define column
 #include "tools.hpp"
