@@ -1,3 +1,4 @@
+/*Written by Steve Nwachukwu and Nick Larkin*/
 #include <iostream>
 #include <fstream>
 #include "dice.hpp"
@@ -22,11 +23,11 @@ void UnitDice (){
     Dice rolling(nDice);
     Diceroll << "And your rolls are:" << endl;
     const int* Rollnum = rolling.roll();
-    //rolling.print(Diceroll);
+    rolling.print(Diceroll);
     Diceroll << endl;
     // cout << "Now" << rolling << endl ;
     Diceroll.close();
-}
+} //the unit test for dice
 
 void UnitPlayer () {
     Player playerVal ( "Jeff", ECcolor::green );
@@ -36,32 +37,32 @@ void UnitPlayer () {
         playerVal.wonColumn(7);
     }
 
-}
+} //the unit test for player
 
 void UnitColumn () {
+    const string colstates[3] = {"Available", "Pending", "Captured"};
     Column creation1(2);
     Column creation2(11);
-    cout << creation1.move();
-    cout << creation2.move();
+    cout << boolalpha << creation1.move();
+    cout << boolalpha << creation2.move();
     Player playing("Josh", ECcolor::blue);
-    cout << creation1.startTower(&playing);
-    cout << creation1.move();
+    cout << boolalpha << creation1.startTower(&playing);
+    cout << boolalpha << creation1.move();
     creation1.stop(&playing);
-    cout << creation1.getState();
+    cout << colstates[creation1.getState()];
     creation1.print(cout);
     cout << endl;
-    cout << creation2.startTower(&playing);
-    creation2.move();
+    cout << boolalpha << creation2.startTower(&playing);
+    cout << boolalpha << creation2.move();
     creation2.stop(&playing);
-    cout << creation2.getState();
+    cout << colstates[creation2.getState()];
     creation2.print(cout);
-}
+} //the unit test for column
 
 int main() {
-    // UnitDice();
-    // bye();
-   //UnitPlayer();
-
-   UnitColumn();
+    //UnitDice();
+    //UnitPlayer();
+    UnitColumn();
+    bye();
     return 0;
 }
